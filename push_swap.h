@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:07:19 by amary             #+#    #+#             */
-/*   Updated: 2025/12/13 13:14:12 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/13 16:52:37 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,7 @@
 #include "ft_printf.h"
 #include <stdlib.h>
 
-typedef struct s_stack
-{
-	int				content;
-	struct s_stack	*next;
-	struct s_stack	*prev;
-}	t_stack;
-
-void	sa();
+void	sa(t_stack *stack_head);
 void	sb();
 void	ss();
 void	pa();

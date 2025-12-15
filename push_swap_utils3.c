@@ -6,15 +6,16 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 19:37:44 by amary             #+#    #+#             */
-/*   Updated: 2025/12/15 18:13:06 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/15 19:21:40 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rrr(void)
+void	rrr(t_stack **stack_b_head, t_stack **stack_a_head)
 {
-	return ;
+	rra(stack_a_head);
+	rrb(stack_b_head);
 }
 
 void	push_front(t_stack **head, t_stack *new_node)

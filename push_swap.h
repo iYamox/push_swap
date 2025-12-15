@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:07:19 by amary             #+#    #+#             */
-/*   Updated: 2025/12/15 18:13:47 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/15 19:16:07 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ void	pb(t_stack **stack_b_head, t_stack **stack_a_head);
 void	ra(t_stack **stack_a_head);
 void	rb(t_stack **stack_b_head);
 void	rr(t_stack **stack_a_head, t_stack **stack_b_head);
-void	rra(void);
-void	rrb(void);
-void	rrr(void);
+void	rra(t_stack **stack_a_head);
+void	rrb(t_stack **stack_b_head);
+void	rrr(t_stack **stack_b_head, t_stack **stack_a_head);
 
 #endif

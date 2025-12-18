@@ -26,6 +26,7 @@ void	ra(t_stack **stack_a_head)
 	while (cpy->next != NULL)
 		cpy = cpy->next;
 	cpy->next = tmp;
+	write(1, "ra\n", 3);
 }
 
 void	rb(t_stack **stack_b_head)
@@ -42,12 +43,14 @@ void	rb(t_stack **stack_b_head)
 	while (cpy->next != NULL)
 		cpy = cpy->next;
 	cpy->next = tmp;
+	write(1, "rb\n", 3);
 }
 
 void	rr(t_stack **stack_a_head, t_stack **stack_b_head)
 {
 	ra(stack_a_head);
 	rb(stack_b_head);
+	write(1, "rr\n", 3);
 }
 
 void	rra(t_stack **stack_a_head)
@@ -64,6 +67,7 @@ void	rra(t_stack **stack_a_head)
 	cpy = cpy->next;
 	tmp->next = NULL;
 	push_front(stack_a_head, cpy);
+	write(1, "rra\n", 4);
 }
 
 void	rrb(t_stack **stack_b_head)
@@ -81,4 +85,5 @@ void	rrb(t_stack **stack_b_head)
 	cpy = cpy->next;
 	tmp->next = NULL;
 	push_front(stack_b_head, cpy);
+	write(1, "rrb\n", 4);
 }

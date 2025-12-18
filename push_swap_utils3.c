@@ -16,6 +16,7 @@ void	rrr(t_stack **stack_b_head, t_stack **stack_a_head)
 {
 	rra(stack_a_head);
 	rrb(stack_b_head);
+	write(1, "rrr\n", 4);
 }
 
 void	push_front(t_stack **head, t_stack *new_node)
@@ -24,4 +25,14 @@ void	push_front(t_stack **head, t_stack *new_node)
 		return ;
 	new_node->next = *head;
 	*head = new_node;
+}
+
+int is_str(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i] && (str[i] == ' ' || str[i] == '\t'))
+		i++;
+	
 }

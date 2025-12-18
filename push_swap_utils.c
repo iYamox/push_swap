@@ -24,6 +24,7 @@ void	sa(t_stack **stack_a_head)
 	(*stack_a_head)->next = tmp->next;
 	tmp->next = *stack_a_head;
 	*stack_a_head = tmp;
+	write(1, "sa\n", 3);
 }
 
 void	sb(t_stack **stack_b_head)
@@ -36,12 +37,14 @@ void	sb(t_stack **stack_b_head)
 	(*stack_b_head)->next = tmp->next;
 	tmp->next = *stack_b_head;
 	*stack_b_head = tmp;
+	write(1, "sb\n", 3);
 }
 
 void	ss(t_stack **stack_a_head, t_stack **stack_b_head)
 {
 	sa(stack_a_head);
 	sb(stack_b_head);
+	write(1, "ss\n", 3);
 }
 
 void	pa(t_stack **stack_b_head, t_stack **stack_a_head)
@@ -53,6 +56,7 @@ void	pa(t_stack **stack_b_head, t_stack **stack_a_head)
 	tmp = *stack_b_head;
 	*stack_b_head = (*stack_b_head)->next;
 	push_front(stack_a_head, tmp);
+	write(1, "pa\n", 3);
 }
 
 void	pb(t_stack **stack_b_head, t_stack **stack_a_head)
@@ -64,4 +68,5 @@ void	pb(t_stack **stack_b_head, t_stack **stack_a_head)
 	tmp = *stack_a_head;
 	*stack_a_head = (*stack_a_head)->next;
 	push_front(stack_b_head, tmp);
+	write(1, "pb\n", 3);
 }

@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:10:46 by amary             #+#    #+#             */
-/*   Updated: 2025/12/19 14:57:44 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/19 15:09:03 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,23 +24,12 @@ Pour chaque element je dois verifier dans cette ordre precis :
 
 int	ft_verif(char **argv, int *tab, int tab_size)
 {
-	int		j;
-	int		k;
-	char	**tmp;
+	int		j; // Pour compter le nombre d'argument
+	int		k; // Pour naviguer dans le **tmp
+	char	**tmp; // Pour stocker les arguments avec le split (a chaque fin d'appel on doit tous free a l'interieur)
 
-	j = 1;
-	k = 0;
-	while (j < tab_size)
-	{
-		tmp = ft_split(argv[j], ' ');
-		while (tmp[k])
-		{
-			if (verif_format(tmp[k]) != 1)
-				return (write(1, "Error\n", 6), 0);
-			k++;
-		}
-		j++;
-	}
+	// Ici je dois faire le parsing
+
 	return (1);
 }
 
@@ -51,17 +40,11 @@ void	ft_push_swap(int argc, char **argv)
 	int	*tab;
 
 	j = 0;
-	size = ft_arg_len(argc, argv); // Je recupere ici la taille de devras posseder le tableau pour stocker tous mes arguments
+	size = ft_arg_len(argc, argv); 
 	tab = malloc(size * sizeof(int));
 	if (!tab)
 		return ;
-	while (j < argc)
-	{
-		if (ft_verif(argv, tab, size) != 1)
-			return ;
-		j++;
-	}
-	return ;
+	ft_verif(argv, tab, size);// Ici je dois verifier pour chaque argument sa validité
 }
 
 int main(int argc, char **argv)

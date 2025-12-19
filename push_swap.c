@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:10:46 by amary             #+#    #+#             */
-/*   Updated: 2025/12/19 13:58:03 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/19 14:00:16 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	ft_push_swap(int argc, char **argv)
 	if (!tab)
 		return ;
 	while (j < argc)
-		ft_verif(argv, )
+		ft_verif(argv, tab, size);
 	return ;
 }
 

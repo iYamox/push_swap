@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:10:49 by amary             #+#    #+#             */
-/*   Updated: 2025/12/15 19:13:16 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/19 13:58:53 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	rr(t_stack **stack_a_head, t_stack **stack_b_head)
 }
 
 void	rra(t_stack **stack_a_head)
-{	
+{
 	t_stack	*cpy;
 	t_stack	*tmp;
 
@@ -71,14 +71,13 @@ void	rra(t_stack **stack_a_head)
 }
 
 void	rrb(t_stack **stack_b_head)
-{	
+{
 	t_stack	*tmp;
 	t_stack	*cpy;
 
 	if (!stack_b_head || !*stack_b_head || (*stack_b_head)->next == NULL)
 		return ;
 	cpy = *stack_b_head;
-
 	while (cpy->next->next != NULL)
 		cpy = cpy->next;
 	tmp = cpy;

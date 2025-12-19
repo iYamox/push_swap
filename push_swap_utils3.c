@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 19:37:44 by amary             #+#    #+#             */
-/*   Updated: 2025/12/19 13:34:49 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/19 13:59:18 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	push_front(t_stack **head, t_stack *new_node)
 int	ft_arg_len(int argc, char **argv)
 {
 	int	j;
-	int count;
+	int	count;
 
 	j = 0;
 	count = 0;
@@ -43,7 +43,7 @@ int	ft_arg_count(char *str, char c)
 {
 	int	i;
 	int	k;
-	
+
 	k = 0;
 	i = 0;
 	while (str[i])
@@ -51,7 +51,7 @@ int	ft_arg_count(char *str, char c)
 		while (str[i] && str[i] == c)
 			i++;
 		if (!str[i])
-			break  ;
+			break ;
 		while (str[i] && str[i] != c)
 			i++;
 		k++;

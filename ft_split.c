@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 12:26:52 by amary             #+#    #+#             */
-/*   Updated: 2025/12/19 13:07:33 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/19 13:55:14 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,11 @@ void	ft_free(char **tab, int index)
 	free(tab);
 }
 
-char *ft_strndup(const char *str, int start, int end)
+char	*ft_strndup(const char *str, int start, int end)
 {
 	int		i;
 	char	*tab;
-		
+
 	tab = malloc((end - start + 1) * sizeof(char));
 	if (!tab)
 		return (NULL);
@@ -67,7 +67,7 @@ int	fill_tab(char **tab, const char *str, char c)
 	int	i;
 	int	k;
 	int	start;
-	
+
 	i = 0;
 	k = 0;
 	while (str[i])
@@ -75,7 +75,7 @@ int	fill_tab(char **tab, const char *str, char c)
 		while (str[i] && str[i] == c)
 			i++;
 		if (!str[i])
-			break  ;
+			break ;
 		start = i;
 		while (str[i] && str[i] != c)
 			i++;
@@ -88,9 +88,9 @@ int	fill_tab(char **tab, const char *str, char c)
 	return (1);
 }
 
-char    **ft_split(char const *str, char c)
+char	**ft_split(char const *str, char c)
 {
-	char **tab;
+	char	**tab;
 
 	if (!str)
 		return (NULL);
@@ -98,6 +98,6 @@ char    **ft_split(char const *str, char c)
 	if (!tab)
 		return (NULL);
 	if (!fill_tab(tab, str, c))
-		return(free(tab), NULL);
+		return (free(tab), NULL);
 	return (tab);
 }

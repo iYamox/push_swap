@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:07:19 by amary             #+#    #+#             */
-/*   Updated: 2025/12/19 13:58:14 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/19 14:49:04 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,7 @@ void	rrb(t_stack **stack_b_head);
 void	rrr(t_stack **stack_b_head, t_stack **stack_a_head);
 int		ft_arg_len(int argc, char **argv);
 int		ft_arg_count(char *str, char c);
+char	**ft_split(char const *str, char c);
+int		verif_format(char *str);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:10:46 by amary             #+#    #+#             */
-/*   Updated: 2025/12/19 14:00:16 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/19 14:57:44 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,28 @@ Pour chaque element je dois verifier dans cette ordre precis :
 	- Je push ensuite chaque element 1 par 1 dans ma stack A et je free ensuite le tableau de int
 */
 
+int	ft_verif(char **argv, int *tab, int tab_size)
+{
+	int		j;
+	int		k;
+	char	**tmp;
+
+	j = 1;
+	k = 0;
+	while (j < tab_size)
+	{
+		tmp = ft_split(argv[j], ' ');
+		while (tmp[k])
+		{
+			if (verif_format(tmp[k]) != 1)
+				return (write(1, "Error\n", 6), 0);
+			k++;
+		}
+		j++;
+	}
+	return (1);
+}
+
 void	ft_push_swap(int argc, char **argv)
 {
 	int	j;
@@ -34,7 +56,11 @@ void	ft_push_swap(int argc, char **argv)
 	if (!tab)
 		return ;
 	while (j < argc)
-		ft_verif(argv, tab, size);
+	{
+		if (ft_verif(argv, tab, size) != 1)
+			return ;
+		j++;
+	}
 	return ;
 }
 

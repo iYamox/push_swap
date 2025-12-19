@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 19:37:44 by amary             #+#    #+#             */
-/*   Updated: 2025/12/19 13:59:18 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/19 14:44:17 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,29 @@ int	ft_arg_count(char *str, char c)
 		k++;
 	}
 	return (k);
+}
+
+int	verif_format(char *str)
+{
+	int	i;
+
+	if (!str)
+		return (0);
+	i = 0;
+	if (str[i] == '+' || str[i] == '-')
+	{
+		i++;
+		if (str[i] >= '0' && str[i] <= '9')
+			i++;
+		else
+			return (0);
+	}
+	while (str[i])
+	{
+		if (str[i] >= '0' && str[i] <= '9')
+			i++;
+		else
+			return (0);
+	}
+	return (1);
 }

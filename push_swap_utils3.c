@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 19:37:44 by amary             #+#    #+#             */
-/*   Updated: 2025/12/15 19:21:40 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/19 13:09:08 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,20 @@ void	push_front(t_stack **head, t_stack *new_node)
 	*head = new_node;
 }
 
-int is_str(char *str)
+int	ft_arg_count(char *str, char c)
 {
-	int i;
-
-	i = 0;
-	while (str[i] && (str[i] == ' ' || str[i] == '\t'))
-		i++;
+	int	i;
 	
+	i = 0;
+	while (str[i])
+	{
+		while (str[i] && str[i] == c)
+			i++;
+		if (!str[i])
+			break  ;
+		while (str[i] && str[i] != c)
+			i++;
+		k++;
+	}
+	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:07:19 by amary             #+#    #+#             */
-/*   Updated: 2025/12/15 19:16:07 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/19 13:19:20 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,7 @@ void	rr(t_stack **stack_a_head, t_stack **stack_b_head);
 void	rra(t_stack **stack_a_head);
 void	rrb(t_stack **stack_b_head);
 void	rrr(t_stack **stack_b_head, t_stack **stack_a_head);
+int		ft_arg_len(int argc, char **argv);
+int		ft_arg_count(char *str, char c);
 
 #endif

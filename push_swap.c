@@ -6,25 +6,24 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:10:46 by amary             #+#    #+#             */
-/*   Updated: 2025/12/19 13:10:53 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/19 13:34:52 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-
-int	ft_verif(char *argv)
-{
-		
-}
-
-
+#include "push_swap.h"
 
 void	ft_push_swap(int argc, char **argv)
 {
-	int	j = 1;
+	int	j;
+	int	size;
 
-	while (j < argc)
-		ft_verif(argv[i])
+	j = 0;
+	size = ft_arg_len(argc, argv);
+
 	return ;
+}
+
+int main(int argc, char **argv)
+{
+	ft_push_swap(argc, argv);
 }

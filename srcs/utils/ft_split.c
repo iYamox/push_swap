@@ -6,12 +6,11 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 12:26:52 by amary             #+#    #+#             */
-/*   Updated: 2025/12/19 13:55:14 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/20 18:32:44 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stddef.h>
+#include "../../include/push_swap.h"
 
 int	ft_count_words(const char *str, char c)
 {

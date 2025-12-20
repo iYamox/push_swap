@@ -6,11 +6,11 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 13:10:01 by amary             #+#    #+#             */
-/*   Updated: 2025/12/20 18:17:49 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/20 18:31:59 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 long	ft_atoi(char *str)
 {

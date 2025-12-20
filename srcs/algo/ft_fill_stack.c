@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_fill_stack.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/20 16:51:43 by amary             #+#    #+#             */
-/*   Updated: 2025/12/20 17:49:49 by amary            ###   ########.fr       */
+/*   Created: 2025/12/20 18:30:26 by amary             #+#    #+#             */
+/*   Updated: 2025/12/20 18:31:30 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../../include/push_swap.h"
 
-int	ft_strlen(char *str)
+void	fill_stack(t_stack **stack_a_head, char **argv)
 {
-	int	i;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
 }
-	

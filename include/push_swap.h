@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:07:19 by amary             #+#    #+#             */
-/*   Updated: 2025/12/20 22:40:44 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/20 23:15:10 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,6 @@ int		ft_check_doublon(char **arg);
 long	ft_atoi(char *str);
 int		ft_strlen(char *str);
 void	fill_stack(t_stack **stack_a_head, char **argv);
+int		is_doublon(int *tab, int size);
 
 #endif

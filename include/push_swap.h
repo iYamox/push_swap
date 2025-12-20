@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:07:19 by amary             #+#    #+#             */
-/*   Updated: 2025/12/20 18:32:53 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/20 19:06:56 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <stdlib.h>
 # include <stddef.h>
 # include <stdio.h>
-#include <limits.h>
+# include <limits.h>
 
 typedef struct s_stack
 {

@@ -6,13 +6,13 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 12:01:39 by amary             #+#    #+#             */
-/*   Updated: 2025/12/20 18:43:33 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/20 19:06:27 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/push_swap.h"
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;

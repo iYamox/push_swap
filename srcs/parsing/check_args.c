@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 12:09:13 by amary             #+#    #+#             */
-/*   Updated: 2025/12/20 18:08:24 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/20 19:07:47 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	my_free(char **tmp)
 {
 	int	j;
 
-	if (!tmp) 
-		return;
+	if (!tmp)
+		return ;
 	j = 0;
 	while (tmp[j])
 	{
@@ -47,7 +47,6 @@ int	ft_arg_count(char *str, char c)
 	return (k);
 }
 
-
 int	ft_arg_len(char **argv)
 {
 	int	j;
@@ -62,8 +61,8 @@ int	ft_arg_len(char **argv)
 
 int	check_args(char **argv)
 {
-	char **tmp;
-	int	j;
+	char	**tmp;
+	int		j;
 
 	j = 1;
 	while (argv[j])

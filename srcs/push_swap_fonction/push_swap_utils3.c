@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 19:37:44 by amary             #+#    #+#             */
-/*   Updated: 2025/12/20 18:50:30 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/20 19:09:05 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,3 @@ void	push_front(t_stack **head, t_stack *new_node)
 	new_node->next = *head;
 	*head = new_node;
 }
-

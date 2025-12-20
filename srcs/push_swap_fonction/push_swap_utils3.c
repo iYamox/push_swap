@@ -6,11 +6,11 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 19:37:44 by amary             #+#    #+#             */
-/*   Updated: 2025/12/20 12:13:00 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/20 18:50:30 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../include/push_swap.h"
 
 void	rrr(t_stack **stack_b_head, t_stack **stack_a_head)
 {

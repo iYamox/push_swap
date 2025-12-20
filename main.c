@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 12:01:39 by amary             #+#    #+#             */
-/*   Updated: 2025/12/20 18:26:23 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/20 18:43:33 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int main(int argc, char **argv)
 
 	if (argc == 1)
 		return (0);
+	stack_a = NULL;
 	stack_b = NULL;
 	if (check_args(argv) == 0)
 		return (write(2, "Error\n", 6), 1);

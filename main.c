@@ -14,15 +14,15 @@
 
 int	main(int argc, char **argv)
 {
-	// t_stack	*stack_a;
-	// t_stack	*stack_b;
+	t_stack	*stack_a;
+	t_stack	*stack_b;
 
 	if (argc == 1)
 		return (0);
-	// stack_a = NULL;
-	// stack_b = NULL;
+	stack_a = NULL;
+	stack_b = NULL;
 	if (check_args(argv) == 0)
 		return (write(2, "Error\n", 6), 1);
-// 	fill_stack(&stack_a, argv);
-// 	return (0);
+	fill_stack(&stack_a, argv);
+	return (0);
 }

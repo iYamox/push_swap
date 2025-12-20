@@ -19,6 +19,18 @@ void	rrr(t_stack **stack_b_head, t_stack **stack_a_head)
 	write(1, "rrr\n", 4);
 }
 
+t_stack	new_node(int content)
+{
+	t_stack	new_node;
+
+	new_node = malloc(sizeof(t_stack));
+	if (!new_node)
+		return (NULL);
+	new_node->content = content;
+	new_node->next = NULL;
+	return (new_node);
+}
+
 void	push_front(t_stack **head, t_stack *new_node)
 {
 	if (!new_node || !head)

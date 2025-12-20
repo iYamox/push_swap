@@ -30,6 +30,7 @@ int	is_doublon(int *tab, int size)
 	}
 	return (free(tab), 1);
 }
+
 int		ft_check_doublon(char **argv)
 {
 	char	**tmp;

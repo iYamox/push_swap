@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 12:30:52 by amary             #+#    #+#             */
-/*   Updated: 2025/12/20 18:06:47 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/20 22:18:20 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ int	ft_check_doublon(char **arg)
 		return (0);
 	i = 0;
 	j = 0;
-	while (j < size)
+	while (j <= size)
 		tab[i++] = ft_atoi(arg[j++]);
 	i = -1;
-	while (++i < size)
+	while (++i <= size)
 	{
 		j = 0;
 		while (j < size)

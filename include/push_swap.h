@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:07:19 by amary             #+#    #+#             */
-/*   Updated: 2025/12/20 19:06:56 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/20 22:14:20 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int		verif_format(char **str);
 int		ft_isdigit(char **argv);
 int		ft_check_limits(char **arg);
 int		ft_check_doublon(char **arg);
-int		ft_atoi(char *str);
+long	ft_atoi(char *str);
 int		ft_strlen(char *str);
 void	fill_stack(t_stack **stack_a_head, char **argv);
 

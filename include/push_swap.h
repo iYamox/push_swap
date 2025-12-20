@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:07:19 by amary             #+#    #+#             */
-/*   Updated: 2025/12/20 16:53:12 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/20 17:53:56 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,10 @@ int		ft_arg_count(char *str, char c);
 char	**ft_split(char const *str, char c);
 void	my_free(char **tmp);
 int		check_args(char **argv);
-int		check_str(char **str);
+int		verif_format(char **str);
 int		ft_isdigit(char **argv);
 int		ft_check_limits(char **arg);
-int		ft_check_sign(char **argv);
+int		ft_check_doublon(char **arg);
 int		ft_atoi(char *str);
 int		ft_strlen(char *str);
 

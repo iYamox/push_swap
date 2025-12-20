@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 12:09:13 by amary             #+#    #+#             */
-/*   Updated: 2025/12/20 16:47:08 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/20 17:46:07 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int	check_args(char **argv)
 	while (argv[j])
 	{
 		tmp = ft_split(argv[j], ' ');
-		if (!(check_str(tmp)))
+		if (!(verif_format(tmp)))
 			return (my_free(tmp), 1);
 		my_free(tmp);
 		j++;
@@ -77,13 +77,13 @@ int	check_args(char **argv)
 	return (0);
 }
 
-int	check_str(char **str)
+int	verif_format(char **str)
 {	
 	if (!(ft_isdigit(str)))
 		return (0);
 	if (!(ft_check_limits(str)))
 		return (0);
-	if (!(ft_check_sign(str)))
+	if (!(ft_check_doublon(str)))
 		return (0);
 	return (1);
 }

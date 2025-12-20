@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 12:09:13 by amary             #+#    #+#             */
-/*   Updated: 2025/12/20 17:46:07 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/20 18:08:24 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,11 +70,11 @@ int	check_args(char **argv)
 	{
 		tmp = ft_split(argv[j], ' ');
 		if (!(verif_format(tmp)))
-			return (my_free(tmp), 1);
+			return (my_free(tmp), 0);
 		my_free(tmp);
 		j++;
 	}
-	return (0);
+	return (1);
 }
 
 int	verif_format(char **str)

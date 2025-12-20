@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 13:10:01 by amary             #+#    #+#             */
-/*   Updated: 2025/12/20 17:32:03 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/20 18:17:49 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ long	ft_atoi(char *str)
 			sign = -sign;
 		i++;
 	}
+	while (str[i] && str[i] == '0')
+		i++;
 	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
 	{
 			result = result * 10 + (str[i] - '0');

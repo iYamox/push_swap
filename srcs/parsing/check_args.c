@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 12:09:13 by amary             #+#    #+#             */
-/*   Updated: 2025/12/20 19:07:47 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/20 22:37:11 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,10 @@ int	check_args(char **argv)
 		my_free(tmp);
 		j++;
 	}
-	return (1);
+	if (is_doublon(argv) == 0)
+		return (0);
+	else
+		return (1);
 }
 
 int	verif_format(char **str)
@@ -81,8 +84,6 @@ int	verif_format(char **str)
 	if (!(ft_isdigit(str)))
 		return (0);
 	if (!(ft_check_limits(str)))
-		return (0);
-	if (!(ft_check_doublon(str)))
 		return (0);
 	return (1);
 }

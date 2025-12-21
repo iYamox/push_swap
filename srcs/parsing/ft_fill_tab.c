@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fill_stack.c                                    :+:      :+:    :+:   */
+/*   ft_fill_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/20 18:30:26 by amary             #+#    #+#             */
-/*   Updated: 2025/12/21 19:50:50 by amary            ###   ########.fr       */
+/*   Created: 2025/12/21 19:41:45 by amary             #+#    #+#             */
+/*   Updated: 2025/12/21 19:55:38 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-void	fill_stack(t_stack **stack_a_head, char **argv)
+int	*ft_fill_tab(int *tab, int size, char **argv)
 {
-	int		*tab;
-	int		size;
+	char	**tmp;
 	int		j;
-
-	size = ft_arg_len(argv);
-	tab = malloc(size * sizeof(int));
-	if (!tab)
-		return ;
-	ft_fill_tab(tab, size, argv);
-	j = size - 1;
-	while (j >= 0)
-			push_front(stack_a_head, new_node(tab[j--]));
-	return (free(tab));
+	int		k;
+	int		i;
+	
+	j = 1;
+	i = 0;
+	while (i < size && argv[j])
+	{
+		k = 0;
+		tmp = ft_split(argv[j++], ' ');
+		while (tmp[k])
+			tab[i++] = ft_atoi(tmp[k++]);
+		my_free(tmp);
+	}
+	return (tab);
 }

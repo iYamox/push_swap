@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 12:30:52 by amary             #+#    #+#             */
-/*   Updated: 2025/12/21 12:32:58 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/21 19:43:19 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,27 +31,16 @@ int	is_doublon(int *tab, int size)
 	return (1);
 }
 
-int	ft_check_doublon(char **argv, int i)
+int	ft_check_doublon(char **argv)
 {
-	char	**tmp;
 	int		*tab;
 	int		size;
-	int		j;
-	int		k;
 
 	size = ft_arg_len(argv);
 	tab = malloc(size * sizeof(int));
 	if (!tab)
 		return (0);
-	j = 1;
-	while (i < size && argv[j])
-	{
-		k = 0;
-		tmp = ft_split(argv[j++], ' ');
-		while (tmp[k])
-			tab[i++] = ft_atoi(tmp[k++]);
-		my_free(tmp);
-	}
+	tab = ft_fill_tab(tab, size, argv);
 	if (is_doublon(tab, size) == 0)
 		return (free(tab), 0);
 	else

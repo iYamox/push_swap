@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 12:09:13 by amary             #+#    #+#             */
-/*   Updated: 2025/12/21 12:33:14 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/21 19:36:55 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ int	check_args(char **argv)
 		my_free(tmp);
 		j++;
 	}
-	if (ft_check_doublon(argv, 0) == 0)
+	if (ft_check_doublon(argv) == 0)
 		return (0);
 	else
 		return (1);

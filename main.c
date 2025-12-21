@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 12:01:39 by amary             #+#    #+#             */
-/*   Updated: 2025/12/21 13:32:08 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/21 13:38:39 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ int	main(int argc, char **argv)
 	if (check_args(argv) == 0)
 		return (write(2, "Error\n", 6), 1);
 	fill_stack(&stack_a, argv, 0);
-	ft_push_swap(&stack_a, &stack_a);
+	ft_push_swap(&stack_a, &stack_b);
 	return (0);
 }

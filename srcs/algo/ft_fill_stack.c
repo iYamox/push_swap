@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 18:30:26 by amary             #+#    #+#             */
-/*   Updated: 2025/12/21 13:26:48 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/21 13:47:25 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ void	fill_stack(t_stack **stack_a_head, char **argv, int i)
 			tab[i++] = ft_atoi(tmp[k++]);
 		my_free(tmp);
 	}
-	j = size;
+	j = size - 1;
 	while (j >= 0)
 			push_front(stack_a_head, new_node(tab[j--]));
-	return ;
+	return (free(tab));
 }

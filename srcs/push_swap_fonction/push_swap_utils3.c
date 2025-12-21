@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 19:37:44 by amary             #+#    #+#             */
-/*   Updated: 2025/12/20 19:09:05 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/21 11:27:14 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	rrr(t_stack **stack_b_head, t_stack **stack_a_head)
 	write(1, "rrr\n", 4);
 }
 
-t_stack	new_node(int content)
+t_stack	*new_node(int content)
 {
-	t_stack	new_node;
+	t_stack	*new_node;
 
 	new_node = malloc(sizeof(t_stack));
 	if (!new_node)

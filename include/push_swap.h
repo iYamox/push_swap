@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:07:19 by amary             #+#    #+#             */
-/*   Updated: 2025/12/21 12:12:30 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/21 13:17:35 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,8 @@ int		ft_check_limits(char **arg);
 int		ft_check_doublon(char **arg, int i);
 long	ft_atoi(char *str);
 int		ft_strlen(char *str);
-void	fill_stack(t_stack **stack_a_head, char **argv);
+void	fill_stack(t_stack **stack_a_head, char **argv, int i);
 int		is_doublon(int *tab, int size);
+t_stack	*new_node(int content);
 
 #endif

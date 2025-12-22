@@ -6,21 +6,21 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 15:26:09 by amary             #+#    #+#             */
-/*   Updated: 2025/12/22 15:53:18 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/22 16:36:49 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-int	ft_get_min(t_stack **stack_a_head)
+int ft_get_min(t_stack **stack_a_head)
 {
-	int		i;
-	int		min;
-	t_stack	*cpy;
-	
+	int i;
+	int min;
+	t_stack *cpy;
+
 	i = 0;
-	min = 0;
 	cpy = *stack_a_head;
+	min = cpy->content;
 	while (cpy)
 	{
 		if (min > cpy->content)
@@ -28,10 +28,12 @@ int	ft_get_min(t_stack **stack_a_head)
 		cpy = cpy->next;
 	}
 	cpy = *stack_a_head;
-	while (cpy->content != min)
+	while (cpy)
 	{
+		if (cpy->content == min)
+			return (i);
 		cpy = cpy->next;
 		i++;
 	}
-	return (i);
+	return (0);
 }

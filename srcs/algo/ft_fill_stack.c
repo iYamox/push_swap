@@ -6,30 +6,30 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 18:30:26 by amary             #+#    #+#             */
-/*   Updated: 2025/12/22 14:25:27 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/22 16:59:28 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-void	fill_stack(t_stack **stack_a_head, char **argv)
+void fill_stack(t_stack **stack_a_head, char **argv)
 {
-	int		*tab;
-	int		size;
-	int		j;
+	int *tab;
+	int size;
+	int j;
 
 	size = ft_arg_len(argv);
 	tab = malloc(size * sizeof(int));
 	if (!tab)
-		return ;
+		return;
 	ft_fill_tab(tab, size, argv);
 	if (is_trier(tab, size) == 1)
 	{
 		free(tab);
-		exit (0);
+		exit(0);
 	}
 	j = size - 1;
 	while (j >= 0)
-			push_front(stack_a_head, new_node(tab[j--]));
+		push_front(stack_a_head, new_node(tab[j--]));
 	return (free(tab));
 }

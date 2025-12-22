@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:07:19 by amary             #+#    #+#             */
-/*   Updated: 2025/12/21 19:44:00 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/22 14:17:58 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,6 @@ int		is_doublon(int *tab, int size);
 t_stack	*new_node(int content);
 void	ft_push_swap(t_stack **stack_a_head, t_stack **stack_b_head);
 int		*ft_fill_tab(int *tab, int size, char **argv);
+int		is_trier(int *tab, int size);
 
 #endif

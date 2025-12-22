@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:10:53 by amary             #+#    #+#             */
-/*   Updated: 2025/12/22 17:19:21 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/22 18:00:16 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ void pb(t_stack **stack_b_head, t_stack **stack_a_head)
 		return;
 	tmp = *stack_a_head;
 	*stack_a_head = (*stack_a_head)->next;
+	tmp->next = NULL;
 	push_front(stack_b_head, tmp);
 	write(1, "pb\n", 3);
 }

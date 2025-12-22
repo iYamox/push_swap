@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:10:46 by amary             #+#    #+#             */
-/*   Updated: 2025/12/22 17:17:45 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/22 18:41:02 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ void	ft_push_swap(t_stack **stack_a_head, t_stack **stack_b_head, int stack_a_si
 	if (stack_a_size == 2)
 		sa(stack_a_head);
 	else if (stack_a_size == 3)
-		ft_algo_is_3(stack_a_head, stack_b_head);
+		ft_algo_is_3(stack_a_head);
 	else if (stack_a_size <= 5)
 		ft_algo_is_5(stack_a_head, stack_b_head);
-	// else if (stack_a_size > 5)
-	// 	ft_big_algo(stack_a_head, stack_b_head);
+	else if (stack_a_size > 5)
+		ft_big_algo(stack_a_head, stack_b_head);
 
 	printf("\nApres :");
 	ft_print_list(*stack_a_head);

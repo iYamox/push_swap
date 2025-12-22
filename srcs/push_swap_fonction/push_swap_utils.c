@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:10:53 by amary             #+#    #+#             */
-/*   Updated: 2025/12/20 18:50:48 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/22 16:07:39 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	pa(t_stack **stack_b_head, t_stack **stack_a_head)
 {
 	t_stack	*tmp;
 
-	if (!stack_b_head || !stack_a_head || !*stack_b_head)
+	if (!stack_a_head || !*stack_b_head)
 		return ;
 	tmp = *stack_b_head;
 	*stack_b_head = (*stack_b_head)->next;
@@ -61,7 +61,7 @@ void	pb(t_stack **stack_b_head, t_stack **stack_a_head)
 {
 	t_stack	*tmp;
 
-	if (!stack_b_head || !stack_a_head || !*stack_a_head)
+	if (!stack_b_head || !*stack_a_head)
 		return ;
 	tmp = *stack_a_head;
 	*stack_a_head = (*stack_a_head)->next;

@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 12:01:39 by amary             #+#    #+#             */
-/*   Updated: 2025/12/21 19:56:35 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/22 16:16:05 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,12 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		return (0);
 	stack_a = NULL;
-	stack_b = NULL;
+	stack_b = malloc(sizeof(t_stack));
+	if (!stack_b)
+		return (0);
 	if (check_args(argv) == 0)
 		return (write(2, "Error\n", 6), 1);
 	fill_stack(&stack_a, argv);
-	ft_push_swap(&stack_a, &stack_b);
+	ft_push_swap(&stack_a, &stack_b, ft_arg_len(argv));
 	return (0);
 }

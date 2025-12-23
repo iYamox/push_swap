@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 19:41:45 by amary             #+#    #+#             */
-/*   Updated: 2025/12/21 19:55:38 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/23 15:41:25 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	*ft_fill_tab(int *tab, int size, char **argv)
 	int		j;
 	int		k;
 	int		i;
-	
+
 	j = 1;
 	i = 0;
 	while (i < size && argv[j])

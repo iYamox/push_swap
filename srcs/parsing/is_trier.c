@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 13:57:53 by amary             #+#    #+#             */
-/*   Updated: 2025/12/22 14:08:31 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/23 15:41:14 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	is_trier(int *tab, int size)
 {
 	int	i;
 	int	min;
-	
+
 	i = 0;
 	min = tab[i];
 	while (++i < size)

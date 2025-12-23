@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:07:19 by amary             #+#    #+#             */
-/*   Updated: 2025/12/22 18:40:23 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/23 15:10:32 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,7 @@ int is_trier(int *tab, int size);
 void ft_algo_is_3(t_stack **stack_a_head);
 int ft_get_min(t_stack **stack_a_head);
 void ft_algo_is_5(t_stack **stack_a_head, t_stack **stack_b_head);
+void	ft_big_algo(t_stack **stack_a_head, t_stack **stack_b_head);
+
 
 #endif

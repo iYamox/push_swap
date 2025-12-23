@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_algo_is_3.c                                     :+:      :+:    :+:   */
+/*   ft_max_is_mid.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/22 15:17:08 by amary             #+#    #+#             */
-/*   Updated: 2025/12/23 17:06:43 by amary            ###   ########.fr       */
+/*   Created: 2025/12/23 16:34:36 by amary             #+#    #+#             */
+/*   Updated: 2025/12/23 16:41:46 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-void	ft_algo_is_3(t_stack **stack_a_head)
+void	ft_max_is_mid(t_stack **stack_a, int max)
 {
-	int		max;
 	t_stack	*cpy;
 
-	max = ft_get_max(stack_a_head);
-	cpy = *stack_a_head;
-	if (cpy->content == max)
+	cpy = *stack_a;
+	if (cpy->next->content == max)
 	{
-		ra(stack_a_head);
-		if ((*stack_a_head)->content > (*stack_a_head)->next->content)
-			sa(stack_a_head);
-		return ;
+		sa(stack_a);
+		ra(stack_a);
+		if (cpy->content > cpy->next->content)
+			sa(stack_a);
 	}
-	while (cpy->next != NULL)
-		cpy = cpy->next;	
-	if (cpy->content == max)
-	{
-		if ((*stack_a_head)->content > (*stack_a_head)->next->content)
-			sa(stack_a_head);
-		return ;
-	}
-	ft_max_is_mid(stack_a_head, max);
 	return ;
 }

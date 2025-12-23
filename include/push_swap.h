@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:07:19 by amary             #+#    #+#             */
-/*   Updated: 2025/12/23 15:41:50 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/23 16:42:05 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,9 @@ void	ft_push_swap(t_stack **stack_a, t_stack **stack_b, int stack_a_size);
 int		*ft_fill_tab(int *tab, int size, char **argv);
 int		is_trier(int *tab, int size);
 void	ft_algo_is_3(t_stack **stack_a_head);
-int		ft_get_min(t_stack **stack_a_head);
+int		ft_get_max(t_stack **stack_a_head);
 void	ft_algo_is_5(t_stack **stack_a_head, t_stack **stack_b_head);
 void	ft_big_algo(t_stack **stack_a_head, t_stack **stack_b_head);
+void	ft_max_is_mid(t_stack **stack_a, int max);
 
 #endif

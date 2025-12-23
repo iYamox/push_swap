@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:10:46 by amary             #+#    #+#             */
-/*   Updated: 2025/12/23 15:32:49 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/23 17:27:47 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_print_list(t_stack *stack_a)
 
 void	ft_push_swap(t_stack **stack_a, t_stack **stack_b, int stack_a_size)
 {
-	printf("Avant :");
+	printf(" (printf dans push_swap.c)\nAvant :");
 	ft_print_list(*stack_a);
 	if (stack_a_size == 2)
 		sa(stack_a);

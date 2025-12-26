@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:07:19 by amary             #+#    #+#             */
-/*   Updated: 2025/12/26 15:04:47 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/26 18:48:37 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,8 @@ void	ft_algo_is_5(t_stack **stack_a_head, t_stack **stack_b_head);
 void	ft_big_algo(t_stack **stack_a_head, t_stack **stack_b_head);
 void	ft_max_is_mid(t_stack **stack_a, int max);
 void	set_min_in_b(t_stack **stack_b_head, t_stack **stack_a);
-void	rotate_and_push(t_stack **stack_b, t_stack **stack_a, int index);
+void	rotate_and_push(t_stack **stack_b, t_stack **stack_a, int index, int min);
+int		ft_lst_len(t_stack *stack);
+void	free_stack(t_stack *stack);
 
 #endif

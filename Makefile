@@ -16,6 +16,8 @@ SRC = push_swap.c \
           srcs/algo/ft_fill_stack.c \
           srcs/algo/set_min_in_b.c \
           srcs/algo/rotate_and_push.c \
+          srcs/algo/ft_lst_len.c \
+          srcs/algo/free_stack.c \
           srcs/push_swap_fonction/push_swap_utils.c \
           srcs/push_swap_fonction/push_swap_utils2.c \
           srcs/push_swap_fonction/push_swap_utils3.c \

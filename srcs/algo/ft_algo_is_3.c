@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 15:17:08 by amary             #+#    #+#             */
-/*   Updated: 2025/12/23 17:21:45 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/26 15:11:04 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_algo_is_3(t_stack **stack_a_head)
 		return ;
 	}
 	while (cpy->next != NULL)
-		cpy = cpy->next;	
+		cpy = cpy->next;
 	if (cpy->content == max)
 	{
 		if ((*stack_a_head)->content > (*stack_a_head)->next->content)

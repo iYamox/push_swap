@@ -1,25 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_algo_is_5.c                                     :+:      :+:    :+:   */
+/*   set_min_in_b.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/22 15:18:33 by amary             #+#    #+#             */
-/*   Updated: 2025/12/26 15:10:53 by amary            ###   ########.fr       */
+/*   Created: 2025/12/26 13:57:23 by amary             #+#    #+#             */
+/*   Updated: 2025/12/26 15:04:13 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-void	ft_algo_is_5(t_stack **stack_a_head, t_stack **stack_b_head)
+void	set_min_in_b(t_stack **stack_b_head, t_stack **stack_a)
 {
-	if (!stack_a_head || !*stack_a_head)
-		return ;
-	set_min_in_b(stack_b_head, stack_a_head);
-	set_min_in_b(stack_b_head, stack_a_head);
-	ft_algo_is_3(stack_a_head);
-	pa(stack_b_head, stack_a_head);
-	pa(stack_b_head, stack_a_head);
-	return ;
+	t_stack	*cpy;
+	int		i;
+	int		min;
+
+	cpy = *stack_a;
+	min = cpy->content;
+	while (cpy)
+	{
+		if (min > cpy->content)
+			min = cpy->content;
+		cpy = cpy->next;
+	}
+	cpy = *stack_a;
+	i = 0;
+	while (cpy)
+	{
+		if (cpy->content == min)
+		{
+			rotate_and_push(stack_b_head, stack_a, i);
+			return ;
+		}
+		i++;
+		cpy = cpy->next;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/26 13:57:23 by amary             #+#    #+#             */
-/*   Updated: 2025/12/29 13:28:33 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/29 16:46:07 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,22 +20,14 @@ void	set_min_in_b(t_stack **stack_b_head, t_stack **stack_a)
 
 	if (!*stack_a || !stack_a)
 		return ;
-	
 	cpy = *stack_a;
-	min = cpy->content;
-	while (cpy)
-	{
-		if (min > cpy->content)
-			min = cpy->content;
-		cpy = cpy->next;
-	}
-	cpy = *stack_a;
+	min = get_min(*stack_a);
 	i = 0;
 	while (cpy)
 	{
 		if (cpy->content == min)
 		{
-			rotate_and_push(stack_b_head, stack_a, i, min);
+			rotate_push(stack_b_head, stack_a, i, min);
 			return ;
 		}
 		i++;

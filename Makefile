@@ -1,5 +1,5 @@
-NAME = pushswap
-CC = cc -Wall -Wextra -Werror
+NAME = push_swap
+CC = cc -Wall -Werror -Wextra
 SRC = push_swap.c \
           main.c \
           srcs/parsing/check_args.c \

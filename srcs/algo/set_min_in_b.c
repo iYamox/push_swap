@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/26 13:57:23 by amary             #+#    #+#             */
-/*   Updated: 2025/12/26 18:30:29 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/29 13:28:33 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@ void	set_min_in_b(t_stack **stack_b_head, t_stack **stack_a)
 	int		i;
 	int		min;
 
+	if (!*stack_a || !stack_a)
+		return ;
+	
 	cpy = *stack_a;
 	min = cpy->content;
 	while (cpy)
@@ -38,4 +41,5 @@ void	set_min_in_b(t_stack **stack_b_head, t_stack **stack_a)
 		i++;
 		cpy = cpy->next;
 	}
+	return ;
 }

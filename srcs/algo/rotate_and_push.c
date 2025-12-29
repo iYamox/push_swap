@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/26 14:55:49 by amary             #+#    #+#             */
-/*   Updated: 2025/12/26 18:33:12 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/29 12:45:28 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	rotate_and_push(t_stack **stack_b, t_stack **stack_a, int index, int min)
 
 	i = index;
 	cpy = *stack_a;
-	while (i)
+	while (i--)
 	{
 		cpy = cpy->next;
 		if ((cpy->next == NULL) && cpy->content == min)
@@ -28,7 +28,6 @@ void	rotate_and_push(t_stack **stack_b, t_stack **stack_a, int index, int min)
 			pb(stack_b, stack_a);
 			return ;
 		}
-		i--;
 	}
 	while (index > 0)
 	{

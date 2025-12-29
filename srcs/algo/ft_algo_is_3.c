@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 15:17:08 by amary             #+#    #+#             */
-/*   Updated: 2025/12/26 15:11:04 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/29 12:33:53 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_algo_is_3(t_stack **stack_a_head)
 {
 	int		max;
 	t_stack	*cpy;
-
+	
 	max = ft_get_max(stack_a_head);
 	cpy = *stack_a_head;
 	if (cpy->content == max)

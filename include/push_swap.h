@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:07:19 by amary             #+#    #+#             */
-/*   Updated: 2025/12/29 16:46:25 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/30 16:30:08 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 typedef struct s_stack
 {
 	int				content;
+	int				index;
 	struct s_stack	*next;
 }					t_stack;
 
@@ -66,5 +67,7 @@ void	rotate_push(t_stack **stack_b, t_stack **stack_a, int index, int min);
 int		ft_lst_len(t_stack *stack);
 void	free_stack(t_stack *stack);
 int		get_min(t_stack	*stack_a);
+void    index_stack(t_stack *stack);
+t_stack *get_min_node(t_stack *stack);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 18:30:26 by amary             #+#    #+#             */
-/*   Updated: 2025/12/23 15:38:23 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/30 15:55:35 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	fill_stack(t_stack **stack_a_head, char **argv)
 {
-	int	*tab;
-	int	size;
-	int	j;
-
+	int		*tab;
+	int		size;
+	int		j;
+	
 	size = ft_arg_len(argv);
 	tab = malloc(size * sizeof(int));
 	if (!tab)

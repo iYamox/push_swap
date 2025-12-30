@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 19:37:44 by amary             #+#    #+#             */
-/*   Updated: 2025/12/26 14:30:02 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/30 16:22:34 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ t_stack	*new_node(int content)
 	if (!new_node)
 		return (NULL);
 	new_node->content = content;
+	new_node->index = -1;
 	new_node->next = NULL;
 	return (new_node);
 }

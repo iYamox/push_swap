@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 12:01:39 by amary             #+#    #+#             */
-/*   Updated: 2025/12/29 12:57:05 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/30 16:31:04 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ int	main(int argc, char **argv)
 	if (check_args(argv) == 0)
 		return (write(2, "Error\n", 6), 1);
 	fill_stack(&stack_a, argv);
-	if (!stack_a)
-		return (write(2, "Stack a est vide", 17), 0);
+	index_stack(stack_a);
 	ft_push_swap(&stack_a, &stack_b, ft_arg_len(argv));
 	free_stack(stack_a);
 	free_stack(stack_b);

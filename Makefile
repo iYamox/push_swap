@@ -8,6 +8,8 @@ SRC = push_swap.c \
           srcs/parsing/ft_fill_tab.c \
           srcs/parsing/is_digit.c \
           srcs/parsing/is_trier.c \
+          srcs/parsing/ft_index_stack.c \
+          srcs/parsing/get_min_node.c \
           srcs/algo/ft_max_is_mid.c \
           srcs/algo/ft_get_max.c \
           srcs/algo/ft_algo_is_3.c \

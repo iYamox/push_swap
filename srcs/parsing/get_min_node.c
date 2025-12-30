@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_big_algo.c                                      :+:      :+:    :+:   */
+/*   get_min_node.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/22 15:19:49 by amary             #+#    #+#             */
-/*   Updated: 2025/12/30 15:54:57 by amary            ###   ########.fr       */
+/*   Created: 2025/12/30 16:23:10 by amary             #+#    #+#             */
+/*   Updated: 2025/12/30 16:30:06 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-void	ft_big_algo(t_stack **stack_a_head, t_stack **stack_b_head)
+t_stack *get_min_node(t_stack *stack)
 {
+	t_stack *min = NULL;
 
-	if (!stack_a_head || !*stack_a_head)
-		return ;
-	(void)stack_b_head;
-	return ;
+	while (stack)
+	{
+		if (stack->index == -1)
+		{
+			if (!min || stack->content < min->content)
+				min = stack;
+		}
+		stack = stack->next;
+	}
+	return (min);
 }

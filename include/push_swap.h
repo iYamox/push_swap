@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:07:19 by amary             #+#    #+#             */
-/*   Updated: 2025/12/30 16:30:08 by amary            ###   ########.fr       */
+/*   Updated: 2025/12/30 17:33:12 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,15 @@ void	rotate_push(t_stack **stack_b, t_stack **stack_a, int index, int min);
 int		ft_lst_len(t_stack *stack);
 void	free_stack(t_stack *stack);
 int		get_min(t_stack	*stack_a);
-void    index_stack(t_stack *stack);
-t_stack *get_min_node(t_stack *stack);
+void	index_stack(t_stack *stack);
+t_stack	*get_min_node(t_stack *stack);
+int		stack_size(t_stack *stack);
+int		get_max_index(t_stack *stack_b);
+int		get_position(t_stack *stack_b, int index);
+void	bring_max_to_top(t_stack **stack_b);
+int		define_chunk_size(int size);
+void	push_to_b(t_stack **stack_a, t_stack **stack_b, int size);
+void	push_back_to_a(t_stack **stack_a, t_stack **stack_b);
+void	ft_big_algo(t_stack **stack_a, t_stack **stack_b);
 
 #endif
